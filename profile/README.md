@@ -9,7 +9,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-chemicheck119.site-E65100?style=for-the-badge)](https://chemicheck119.site)
 [![Competition](https://img.shields.io/badge/소방안전_빅데이터-서비스_개발_부문-C62828?style=for-the-badge)](https://www.bigdata-119.kr/)
-[![Safety](https://img.shields.io/badge/Safety-Human_in_the_Loop-1565C0?style=for-the-badge)](https://github.com/chemicheck119/llm/blob/main/docs/SAFETY_AND_LIMITATIONS.md)
+[![Safety](https://img.shields.io/badge/Safety-Human_in_the_Loop-1565C0?style=for-the-badge)](https://github.com/chemicheck119-lab/llm/blob/main/docs/SAFETY_AND_LIMITATIONS.md)
 
 </div>
 
@@ -45,16 +45,16 @@
 | 물질명 언급 Recall | **81.50%** | 같은 평가에서 사고문에 언급된 물질명을 찾은 비율 |
 
 > 수치는 저장소에 고정된 평가셋의 재현 결과이며 전국 현장 정확도를 의미하지 않습니다.  
-> 평가 기준과 실패 사례는 [AI 모델 평가 문서](https://github.com/chemicheck119/llm/blob/main/docs/EVALUATION.md)에서 확인할 수 있습니다.
+> 평가 기준과 실패 사례는 [AI 모델 평가 문서](https://github.com/chemicheck119-lab/llm/blob/main/docs/EVALUATION.md)에서 확인할 수 있습니다.
 
 ## 저장소 안내
 
 | 저장소 | 역할 | 주요 기술 |
 |---|---|---|
-| [**front**](https://github.com/chemicheck119/front) | 출동 위치·물질 확인·충돌 결과·대응 기록을 연결하는 태블릿 대시보드 | TypeScript · React · Vite |
-| [**back**](https://github.com/chemicheck119/back) | 인증·사고 상태·AI 연동·현장 확인·기록 저장을 담당하는 BFF | Java 17 · Spring Boot · PostgreSQL |
-| [**llm**](https://github.com/chemicheck119/llm) | 신고문 분석·물질 Resolver·근거 검색·CAMEO Rule Engine | Python 3.11 · FastAPI · TF-IDF/BM25 |
-| [**.github**](https://github.com/chemicheck119/.github) | 조직 소개와 공통 GitHub 설정 | Markdown |
+| [**front**](https://github.com/chemicheck119-lab/front) | 출동 위치·물질 확인·충돌 결과·대응 기록을 연결하는 태블릿 대시보드 | TypeScript · React · Vite |
+| [**back**](https://github.com/chemicheck119-lab/back) | 인증·사고 상태·AI 연동·현장 확인·기록 저장을 담당하는 BFF | Java 17 · Spring Boot · PostgreSQL |
+| [**llm**](https://github.com/chemicheck119-lab/llm) | 신고문 분석·물질 Resolver·근거 검색·CAMEO Rule Engine | Python 3.11 · FastAPI · TF-IDF/BM25 |
+| [**.github**](https://github.com/chemicheck119-lab/.github) | 조직 소개와 공통 GitHub 설정 | Markdown |
 
 ## 활용 데이터
 
@@ -80,7 +80,7 @@
 **AI가 물질을 단정하거나 대응을 지시하지 않도록 설계한, 근거 중심 화학사고 현장대응 지원 시스템**
 
 [서비스 데모](https://chemicheck119.site) ·
-[AI 아키텍처](https://github.com/chemicheck119/llm/blob/main/docs/ARCHITECTURE.md) ·
-[API 문서](https://github.com/chemicheck119/llm/blob/main/docs/API.md)
+[AI 아키텍처](https://github.com/chemicheck119-lab/llm/blob/main/docs/ARCHITECTURE.md) ·
+[API 문서](https://github.com/chemicheck119-lab/llm/blob/main/docs/API.md)
 
 </div>
