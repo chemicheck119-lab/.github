@@ -9,6 +9,10 @@
 3. Pull Request 템플릿에 변경 이유, 검증 결과, 안전성 영향, 사실 상태를 기록합니다.
 4. CI 통과와 대화 해결 후 squash merge합니다.
 
+이슈·커밋·PR 제목은 `feat(evaluation): 교차지역 STT 평가 추가`처럼 작성합니다.
+`type(scope)`는 영어, 설명은 한국어를 기본으로 하고 필요한 기술 용어는 영어로 유지합니다.
+브랜치명에는 `codex`를 사용하지 않습니다.
+
 저장소별 실행 명령은 각 README와 워크플로를 따릅니다. Secret이나 개인정보가 포함된 로그와 데이터는 커밋하거나 이슈에 첨부하지 마세요.
 
 상세 정책은 [Repository governance](https://github.com/chemicheck119-lab/.github/blob/main/GOVERNANCE.md)를 확인해 주세요.

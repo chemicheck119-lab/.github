@@ -17,10 +17,37 @@
 ## 변경 흐름
 
 1. 이슈에 문제, 범위, 완료 기준을 기록합니다.
-2. `feat/`, `fix/`, `docs/`, `chore/` 또는 `codex/` 브랜치에서 작업합니다.
+2. `feature/`, `fix/`, `experiment/`, `modeling/`, `docs/`, `chore/` 브랜치에서 작업합니다.
 3. 기본 브랜치로 Pull Request를 만들고 템플릿의 검증·근거 항목을 채웁니다.
 4. 필수 CI가 통과하고 대화가 해결된 뒤 squash merge합니다.
 5. 배포 변경은 staging 검증과 복구 방법을 기록한 뒤 진행합니다.
+
+브랜치 suffix는 영어 kebab-case를 사용하고 `codex`를 붙이지 않습니다. 이슈·커밋·PR
+제목은 Conventional Commit 형식으로 통일합니다.
+
+```text
+feat(evaluation): 모의 통신 왜곡 LoRA 진입 Gate 강화
+fix(speech): 긴 음성 timeout 처리
+docs(infra): Cloud Run 복구 절차 보완
+test(resolver): 미관측 표현 회귀 평가 추가
+```
+
+`type(scope)`는 영어로 쓰고, 뒤 설명은 한국어를 기본으로 하되 `Resolver`, `Recall`,
+`Cloud Run`처럼 정확성이 필요한 기술 용어는 영어로 유지합니다. 제목 전체를 한국어로만
+작성하거나 `[Feature]` 같은 별도 접두사를 사용하지 않습니다.
+
+## 이슈와 라벨
+
+- 모든 구현·실험은 관련 이슈에 문제, 근거 상태, 완료 조건을 먼저 기록합니다.
+- 코드 병합과 실제 데이터 평가 완료를 별도 체크 항목으로 관리합니다.
+- 실제 음성·전사문·개인정보·Secret은 이슈와 PR에 첨부하지 않습니다.
+- 진행 중 이슈에는 `status:in-progress`, 실제 외부 의존성으로 중단되면
+  `status:blocked`를 사용합니다. 두 상태 라벨을 동시에 붙이지 않습니다.
+- 측정 근거가 남지 않은 주장은 `evidence-needed`, 2-CAS Gate 등 안전 불변식에 영향을
+  주는 변경은 `safety:critical`로 표시합니다.
+- 닫기 전에 체크리스트, 재현 명령, artifact hash, 채택·기각 결정을 갱신합니다.
+
+라벨 분류와 적용 기준은 [Label policy](LABELS.md)를 따릅니다.
 
 ## 사실 상태
 
