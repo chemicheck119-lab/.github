@@ -1,0 +1,63 @@
+name: Evaluation or experiment
+description: 기준선과 채택·기각 조건이 있는 평가 또는 실험을 등록합니다.
+title: "test(evaluation): "
+labels:
+  - "type:test"
+  - "evidence-needed"
+body:
+  - type: markdown
+    attributes:
+      value: "실제 측정값이 나오기 전에는 목표를 성과로 표현하지 마세요. 실제 음성·전사문·개인정보는 첨부하지 않습니다."
+  - type: textarea
+    id: failure
+    attributes:
+      label: 해결하려는 실패 사례와 가설
+      description: 어떤 반복 오류를 어떤 이유로 개선할 수 있다고 보는지 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: baseline
+    attributes:
+      label: 기준선과 사용할 데이터
+      description: 현재 실제 측정값, 데이터 출처·버전·범위, train/dev/test 분리를 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: 주요 지표와 안전 지표
+      description: 일반 성능과 기권·오승격·Gate 우회 같은 안전 지표를 구분해 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: 채택·기각·중단 조건
+      description: 결과를 본 뒤 임의로 기준을 바꾸지 않도록 실험 전에 적어 주세요.
+    validations:
+      required: true
+  - type: input
+    id: cost
+    attributes:
+      label: 예상 컴퓨팅 비용과 실행 상한
+      placeholder: "예: CPU 4시간, 재시도 0회, 예상 8,000원 이하"
+    validations:
+      required: true
+  - type: textarea
+    id: claims
+    attributes:
+      label: 주장 가능 범위와 금지 범위
+      description: 이 결과가 증명하는 것과 증명하지 못하는 것을 각각 적어 주세요.
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence_state
+    attributes:
+      label: 현재 사실 상태
+      options:
+        - 검증되지 않은 가설
+        - 설계 완료·구현 전
+        - 부분 구현 또는 개발용 데모
+        - 구현 완료
+    validations:
+      required: true

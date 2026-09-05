@@ -1,9 +1,12 @@
 name: Feature proposal
 description: 사용자 문제와 검증 기준이 있는 기능을 제안합니다.
-title: "[Feature] "
+title: "feat(scope): "
 labels:
   - "type:feature"
 body:
+  - type: markdown
+    attributes:
+      value: "`scope`를 영어 영향 영역으로 바꾸세요. 예: `feat(evaluation): 교차지역 STT 평가 추가`. 설명은 한국어를 기본으로 하되 기술 용어는 억지로 번역하지 않습니다."
   - type: textarea
     id: problem
     attributes:

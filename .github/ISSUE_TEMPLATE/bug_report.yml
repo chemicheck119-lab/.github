@@ -1,12 +1,12 @@
 name: Bug report
 description: 재현 가능한 오류 또는 운영 이상을 보고합니다.
-title: "[Bug] "
+title: "fix(scope): "
 labels:
   - "type:bug"
 body:
   - type: markdown
     attributes:
-      value: "민감정보, 토큰, 실제 신고 음성은 첨부하지 마세요."
+      value: "`scope`를 영어 영향 영역으로 바꾸세요. 예: `fix(speech): 긴 음성 timeout 처리`. 민감정보, 토큰, 실제 신고 음성은 첨부하지 마세요."
   - type: dropdown
     id: repository
     attributes:
