@@ -8,7 +8,10 @@
 | --- | --- | --- |
 | `front` | 현장 대응 UI와 사용자 흐름 | `develop` |
 | `back` | BFF, 인증, 영속화, 배포 경계 | `develop` |
-| `llm` | Parser·Resolver·Retriever·Rule Engine 및 평가 | `main` |
+| `speech-service` | 음성 전처리·STT·음성 평가 | `main` |
+| `analysis-engine` | Parser·Resolver·Retriever·Rule Engine 및 평가 | `main` |
+| `data-pipeline` | 데이터 수집·manifest·분할·품질검증 | `main` |
+| `infra` | 클라우드 인프라와 운영 자동화(현재 저장소만 생성) | `main` |
 | `.github` | 조직 공통 정책과 템플릿 | `main` |
 
 ## 변경 흐름
