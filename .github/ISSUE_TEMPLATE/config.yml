@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/chemicheck119-lab/.github/security/policy
+    about: 취약점은 공개 이슈가 아닌 보안 신고 채널을 사용해 주세요.

@@ -1,0 +1,50 @@
+name: Bug report
+description: 재현 가능한 오류 또는 운영 이상을 보고합니다.
+title: "[Bug] "
+labels:
+  - "type:bug"
+body:
+  - type: markdown
+    attributes:
+      value: "민감정보, 토큰, 실제 신고 음성은 첨부하지 마세요."
+  - type: dropdown
+    id: repository
+    attributes:
+      label: 영향 영역
+      options:
+        - Frontend
+        - Backend
+        - LLM pipeline
+        - Data or evaluation
+        - Deployment or infrastructure
+    validations:
+      required: true
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 증상과 영향
+      description: 무엇이 발생했고 사용자 또는 시스템에 어떤 영향이 있었나요?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 재현 절차
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대 결과
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 확인 근거
+      description: 커밋, 환경, 민감정보를 제거한 로그나 스크린샷을 적어 주세요.
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 임시 조치와 복구 방법
